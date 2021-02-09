@@ -40,6 +40,9 @@ const yelling = words => {
  *
  */
 
+ const doubleTrouble = numbers => {
+   return numbers.map(numbers => numbers * 2)
+ }
 // ...
 
 /*
