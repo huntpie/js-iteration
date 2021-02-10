@@ -54,6 +54,10 @@ const yelling = words => {
  *
  */
 
+function stringyIndexes(strings) {
+  return strings.map((string, index) => `${string} is at index ${index}`)
+}
+
 // ...
 
 /*
@@ -63,7 +67,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function onlyTheEvenSurvive(numbers) {
+  return numbers.filter(number => !(number % 2))
+}
 // ...
 
 /*
@@ -73,7 +79,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function onlyTheEvenIndexedSurvive(numbers) {
+  return numbers.filter((number,index) => !(index % 2))
+}
 // ...
 
 /*
@@ -92,7 +100,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function bestMoviesOfTheYear(movies, year) {
+  let moviesFilter = movies.filter(movie => (movie.year == year) && (movie.score > 90))
+  return moviesFilter.map(movies => movies.name)
+}
 // ...
 
 /*
@@ -103,7 +114,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function everyoneIsOdd (numbers) {
+  return numbers.every(number => (number % 2))
+}
 // ...
 
 /*
@@ -114,7 +127,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function findTheNeedle (strings) {
+  return strings.find(string => string.includes('needle'))
+}
 // ...
 
 /*
@@ -125,7 +140,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function findTheNeedleIndex(strings) {
+  return strings.findIndex(string => string.includes('needle'))
+}
 // ...
 
 /*
@@ -136,7 +153,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+function someoneToLove(strings) {
+  return strings.some( string => (string.length == 4))
+}
 // ...
 
 /*
@@ -172,9 +191,10 @@ const yelling = words => {
  *
  */
 
-// function objectKeys(objectOfHobbies) {
-//   // Your code here
-// }
+function objectKeys(objectOfHobbies) {
+    let objectHelp = objectOfHobbies.entries(object => object)
+    return objectHelp.map(object => object + ` - ${object.title}`)
+ }
 
 // ...
 
